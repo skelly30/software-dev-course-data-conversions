@@ -22,11 +22,20 @@ Use console.log() to clearly show the before-and-after type conversions.
 let result = "5" - 2;
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+let someString = "false";
+let isValid = (someString === "true");
 if (isValid) {
     console.log("This is valid!");
 }
 
 let age = "25";
-let totalAge = age + 5;
+let totalAge = Number(age) + 5;
 console.log("Total Age: " + totalAge);
+
+// my explicit example
+console.log(String(25));
+
+// my implicit example
+let sentence = "The answer to this question is " + true;
+console.log(sentence)
+
